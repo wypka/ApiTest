@@ -1,4 +1,4 @@
-package edu.ex.sensor.api;
+package edu.iot.ex;
 
 import java.io.File;
 import java.util.List;
@@ -44,7 +44,7 @@ public class SensorApiController {
 	}
 
 	@RequestMapping(value="/upload" , method=RequestMethod.POST)
-	public byte[] uploadImage(@RequestParam("picture") MultipartFile file ){
+	public byte[] uploadImage(@RequestParam("camFile") MultipartFile file ){
 		return service.upload(file);
 	}
 }
